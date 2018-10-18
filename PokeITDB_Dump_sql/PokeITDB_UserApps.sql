@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+--
+-- Host: localhost    Database: PokeITDB
+-- ------------------------------------------------------
+-- Server version	5.7.22
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `UserApps`
+--
+
+DROP TABLE IF EXISTS `UserApps`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `UserApps` (
+  `AppID` int(11) NOT NULL,
+  `emailId` varchar(100) NOT NULL,
+  `GroupID` varchar(20) NOT NULL,
+  `Status` int(11) NOT NULL,
+  `CreatedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `UpdatedDate` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  KEY `FK_AppID` (`AppID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `UserApps`
+--
+
+LOCK TABLES `UserApps` WRITE;
+/*!40000 ALTER TABLE `UserApps` DISABLE KEYS */;
+INSERT INTO `UserApps` VALUES (5,'testuser','R1',1,'2018-08-23 20:57:48',NULL),(1,'testuser','R1',1,'2018-08-23 20:57:57',NULL),(1,'james','R1',1,'2018-08-23 21:06:24',NULL),(5,'james','R1',1,'2018-08-23 21:07:44',NULL),(2,'james','R1',1,'2018-08-24 16:40:00',NULL),(3,'james','R1',1,'2018-08-27 11:38:14',NULL),(17,'james','R1',1,'2018-08-27 11:38:26',NULL),(16,'james','R1',1,'2018-08-27 11:38:31',NULL),(12,'james','R1',1,'2018-08-27 11:38:54',NULL),(10,'james','R1',1,'2018-08-27 11:40:02',NULL),(15,'james','R1',1,'2018-08-27 11:40:12',NULL),(6,'james','R1',1,'2018-08-27 11:40:27',NULL),(14,'james','R1',1,'2018-08-27 11:40:42',NULL),(13,'james','R1',1,'2018-08-27 11:40:47',NULL),(9,'james','R1',1,'2018-08-27 11:40:52',NULL),(8,'james','R1',1,'2018-08-27 11:40:56',NULL),(7,'james','R1',1,'2018-08-27 11:41:02',NULL),(4,'james','HR1',1,'2018-08-27 11:41:07',NULL);
+/*!40000 ALTER TABLE `UserApps` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-09-04 17:38:02

@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+--
+-- Host: localhost    Database: PokeITDB
+-- ------------------------------------------------------
+-- Server version	5.7.22
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `App_Master`
+--
+
+DROP TABLE IF EXISTS `App_Master`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `App_Master` (
+  `AppID` int(11) NOT NULL AUTO_INCREMENT,
+  `APPName` varchar(100) NOT NULL,
+  `GroupID` varchar(100) NOT NULL,
+  `Group` varchar(100) NOT NULL,
+  `Status` int(11) NOT NULL,
+  `Created` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`AppID`),
+  UNIQUE KEY `APPName_UNIQUE` (`APPName`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `App_Master`
+--
+
+LOCK TABLES `App_Master` WRITE;
+/*!40000 ALTER TABLE `App_Master` DISABLE KEYS */;
+INSERT INTO `App_Master` VALUES (1,'rrm','R1','REALS',1,'2018-07-23 12:05:55'),(2,'mailcenter','R1','REALS',1,'2018-07-23 12:06:10'),(3,'facilities','R1','REALS',1,'2018-07-23 12:06:22'),(4,'Merilin','HR1','HR',1,'2018-07-23 12:04:22'),(5,'iwms','R1','REALS',1,'2018-07-23 12:05:55'),(6,'CMDW','R1','REALS',1,'2018-07-23 12:05:55'),(7,'VCC','R1','REALS',1,'2018-07-23 12:05:55'),(8,'EB Cloud','R1','REALS',1,'2018-07-23 12:05:55'),(9,'TeamConnect','R1','REALS',1,'2018-07-23 12:05:55'),(10,'OGC Portal','R1','REALS',1,'2018-07-23 12:05:55'),(12,'WebTMS','R1','REALS',1,'2018-07-23 12:05:55'),(13,'Shipping','R1','REALS',1,'2018-07-23 12:05:55'),(14,'Shield','R1','REALS',1,'2018-07-23 12:05:55'),(15,'NorthStar','R1','REALS',1,'2018-07-23 12:05:55'),(16,'CMS','R1','REALS',1,'2018-07-23 12:05:55'),(17,'TRIRIGA Leas','R1','REALS',1,'2018-07-23 12:05:55');
+/*!40000 ALTER TABLE `App_Master` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-09-04 17:38:01
